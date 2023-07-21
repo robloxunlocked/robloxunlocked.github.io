@@ -6,25 +6,26 @@
 <body>
     <div style="text-align: center;">
         <h2>Huges</h2>
-        <button onclick="displayHuge('10b')">Huge Cat</button>
-        <button onclick="displayHuge('20b')">Huge Dog</button>
-        <p id="hugeValue"></p>
+        <p id="hugeValue">10b</p> <!-- Placeholder for Huge Cat value -->
     </div>
     <div style="text-align: center;">
         <h2>Exclusives</h2>
-        <button onclick="displayExclusive('10m')">Exclusive Cat</button>
-        <button onclick="displayExclusive('20m')">Exclusive Dog</button>
-        <p id="exclusiveValue"></p>
+        <p id="exclusiveValue">20m</p> <!-- Placeholder for Exclusive Dog value -->
     </div>
 
     <script>
-        function displayHuge(value) {
-            document.getElementById("hugeValue").innerText = value;
+        function updateValues() {
+            // Assuming you have some way to retrieve the values from your backend/API
+            // You can update the values of the placeholders here as needed.
+            var hugeCatValue = "VALUE_FROM_BACKEND_HUGE_CAT"; // Replace this with the value from your backend
+            var exclusiveDogValue = "VALUE_FROM_BACKEND_EXCLUSIVE_DOG"; // Replace this with the value from your backend
+
+            document.getElementById("hugeValue").innerText = hugeCatValue;
+            document.getElementById("exclusiveValue").innerText = exclusiveDogValue;
         }
 
-        function displayExclusive(value) {
-            document.getElementById("exclusiveValue").innerText = value;
-        }
+        // Periodically update the values every 5 seconds (adjust the interval as needed)
+        setInterval(updateValues, 5000);
     </script>
 </body>
 </html>
